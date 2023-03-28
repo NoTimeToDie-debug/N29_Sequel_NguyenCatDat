@@ -1,4 +1,4 @@
-const {Op} = require('sequelize');
+const {Op, where} = require('sequelize');
 const initModels = require('../models/init-models');
 const sequelize = require('../models/index');
 const food = require('../models/food');
@@ -37,7 +37,30 @@ const createFood = async (req,res) => {
     }
 }
 
+const updateFood = async (req , res) => {
+    try {
+        let { food_id } = req.params;
+        const {food_name , image , price , desc , type_id} = req.body;
+        let modelUpdate = {
+            food_name,
+            image,            
+            price,
+            desc,
+            type_id
+        }
+        let data = await model.food.update(modelUpdate, {
+            where: {
+                food_id
+            }
+        });
+        res.status(200).send(data);
+    } catch (error) {
+        res.status(500).send('lỗi BE')
+    }
+}
+
 module.exports = {
     getFood,
-    createFood
+    createFood,
+    updateFood
 }
