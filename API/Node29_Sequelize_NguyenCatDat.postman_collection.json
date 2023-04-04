@@ -1,0 +1,381 @@
+{
+	"info": {
+		"_postman_id": "0253d465-7466-40e6-8e71-27c1d8cc0006",
+		"name": "Node29_Sequelize_NguyenCatDat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26305354"
+	},
+	"item": [
+		{
+			"name": "Get Food",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEzLCJmdWxsX25hbWUiOiJzaGF6YW0iLCJlbWFpbCI6InNoYXphbUBnbWFpbC5jb20iLCJwYXNzX3dvcmQiOiIkMmIkMTAkZ2VKRFBETk5WcWhOcmxlZi9ibC9JdWU4dzlpR2NTY0x1c01pVUJVZ3pzU0Njb0xTdG9EQm0ifSwiaWF0IjoxNjc5ODAyNDcwLCJleHAiOjE2Nzk4MDI3NzB9._S4SYJKJA2KF8HPRIv2-mJ0_JkqHkhDBgUdUcaQhhCA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"shazam@gmail.com\",\r\n    \"password\":\"1234\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/food/get-food",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"get-food"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Like Restaurant User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEzLCJmdWxsX25hbWUiOiJzaGF6YW0iLCJlbWFpbCI6InNoYXphbUBnbWFpbC5jb20iLCJwYXNzX3dvcmQiOiIkMmIkMTAkZ2VKRFBETk5WcWhOcmxlZi9ibC9JdWU4dzlpR2NTY0x1c01pVUJVZ3pzU0Njb0xTdG9EQm0ifSwiaWF0IjoxNjc5ODAyNDcwLCJleHAiOjE2Nzk4MDI3NzB9._S4SYJKJA2KF8HPRIv2-mJ0_JkqHkhDBgUdUcaQhhCA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"shazam@gmail.com\",\r\n    \"password\":\"1234\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/food/get-like-res-user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"get-like-res-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Rate Restaurant User",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEzLCJmdWxsX25hbWUiOiJzaGF6YW0iLCJlbWFpbCI6InNoYXphbUBnbWFpbC5jb20iLCJwYXNzX3dvcmQiOiIkMmIkMTAkZ2VKRFBETk5WcWhOcmxlZi9ibC9JdWU4dzlpR2NTY0x1c01pVUJVZ3pzU0Njb0xTdG9EQm0ifSwiaWF0IjoxNjc5ODAyNDcwLCJleHAiOjE2Nzk4MDI3NzB9._S4SYJKJA2KF8HPRIv2-mJ0_JkqHkhDBgUdUcaQhhCA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"shazam@gmail.com\",\r\n    \"password\":\"1234\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/food/get-like-res-user",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"get-like-res-user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Count Like Restaurant",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEzLCJmdWxsX25hbWUiOiJzaGF6YW0iLCJlbWFpbCI6InNoYXphbUBnbWFpbC5jb20iLCJwYXNzX3dvcmQiOiIkMmIkMTAkZ2VKRFBETk5WcWhOcmxlZi9ibC9JdWU4dzlpR2NTY0x1c01pVUJVZ3pzU0Njb0xTdG9EQm0ifSwiaWF0IjoxNjc5ODAyNDcwLCJleHAiOjE2Nzk4MDI3NzB9._S4SYJKJA2KF8HPRIv2-mJ0_JkqHkhDBgUdUcaQhhCA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"shazam@gmail.com\",\r\n    \"password\":\"1234\"\r\n}   ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/food/get-like-res",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"get-like-res"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Food",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEzLCJmdWxsX25hbWUiOiJzaGF6YW0iLCJlbWFpbCI6InNoYXphbUBnbWFpbC5jb20iLCJwYXNzX3dvcmQiOiIkMmIkMTAkZ2VKRFBETk5WcWhOcmxlZi9ibC9JdWU4dzlpR2NTY0x1c01pVUJVZ3pzU0Njb0xTdG9EQm0ifSwiaWF0IjoxNjc5ODAyNDcwLCJleHAiOjE2Nzk4MDI3NzB9._S4SYJKJA2KF8HPRIv2-mJ0_JkqHkhDBgUdUcaQhhCA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"food_name\":\"khô mực loại I\",\r\n    \"image\":\"https://dacsanthanhnam.com/wp-content/uploads/2021/11/muc-kho-ngon-840x410.jpg\",\r\n    \"price\":1100,\r\n    \"desc\":\"khô mực chứ ko phải khô mực\",\r\n    \"type_id\":5\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/food/update-food/12",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"update-food",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Remove Like Restaurant",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEzLCJmdWxsX25hbWUiOiJzaGF6YW0iLCJlbWFpbCI6InNoYXphbUBnbWFpbC5jb20iLCJwYXNzX3dvcmQiOiIkMmIkMTAkZ2VKRFBETk5WcWhOcmxlZi9ibC9JdWU4dzlpR2NTY0x1c01pVUJVZ3pzU0Njb0xTdG9EQm0ifSwiaWF0IjoxNjc5ODAyNDcwLCJleHAiOjE2Nzk4MDI3NzB9._S4SYJKJA2KF8HPRIv2-mJ0_JkqHkhDBgUdUcaQhhCA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"food_name\":\"khô mực loại I\",\r\n    \"image\":\"https://dacsanthanhnam.com/wp-content/uploads/2021/11/muc-kho-ngon-840x410.jpg\",\r\n    \"price\":1100,\r\n    \"desc\":\"khô mực chứ ko phải khô mực\",\r\n    \"type_id\":5\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/food/update-food/12",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"update-food",
+						"12"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Food",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEzLCJmdWxsX25hbWUiOiJzaGF6YW0iLCJlbWFpbCI6InNoYXphbUBnbWFpbC5jb20iLCJwYXNzX3dvcmQiOiIkMmIkMTAkZ2VKRFBETk5WcWhOcmxlZi9ibC9JdWU4dzlpR2NTY0x1c01pVUJVZ3pzU0Njb0xTdG9EQm0ifSwiaWF0IjoxNjc5ODAyNDcwLCJleHAiOjE2Nzk4MDI3NzB9._S4SYJKJA2KF8HPRIv2-mJ0_JkqHkhDBgUdUcaQhhCA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"food_name\":\"khô mực\",\r\n    \"image\":\"https://dacsanthanhnam.com/wp-content/uploads/2021/11/muc-kho-ngon-840x410.jpg\",\r\n    \"price\":900,\r\n    \"desc\":\"khô mực chứ ko phải khô mực\",\r\n    \"type_id\":5\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/food/create-food",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"create-food"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Order",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEzLCJmdWxsX25hbWUiOiJzaGF6YW0iLCJlbWFpbCI6InNoYXphbUBnbWFpbC5jb20iLCJwYXNzX3dvcmQiOiIkMmIkMTAkZ2VKRFBETk5WcWhOcmxlZi9ibC9JdWU4dzlpR2NTY0x1c01pVUJVZ3pzU0Njb0xTdG9EQm0ifSwiaWF0IjoxNjc5ODAyNDcwLCJleHAiOjE2Nzk4MDI3NzB9._S4SYJKJA2KF8HPRIv2-mJ0_JkqHkhDBgUdUcaQhhCA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"food_name\":\"khô mực\",\r\n    \"image\":\"https://dacsanthanhnam.com/wp-content/uploads/2021/11/muc-kho-ngon-840x410.jpg\",\r\n    \"price\":900,\r\n    \"desc\":\"khô mực chứ ko phải khô mực\",\r\n    \"type_id\":5\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/food/create-food",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"create-food"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Like Restaurant",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEzLCJmdWxsX25hbWUiOiJzaGF6YW0iLCJlbWFpbCI6InNoYXphbUBnbWFpbC5jb20iLCJwYXNzX3dvcmQiOiIkMmIkMTAkZ2VKRFBETk5WcWhOcmxlZi9ibC9JdWU4dzlpR2NTY0x1c01pVUJVZ3pzU0Njb0xTdG9EQm0ifSwiaWF0IjoxNjc5ODAyNDcwLCJleHAiOjE2Nzk4MDI3NzB9._S4SYJKJA2KF8HPRIv2-mJ0_JkqHkhDBgUdUcaQhhCA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"5\",\t\r\n    \"res_id\":\"3\",\t\r\n    \"date_like\":\"2023 01 01 09 00 00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/food/create-like-res",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"create-like-res"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Rate Restaurant",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjp7InVzZXJfaWQiOjEzLCJmdWxsX25hbWUiOiJzaGF6YW0iLCJlbWFpbCI6InNoYXphbUBnbWFpbC5jb20iLCJwYXNzX3dvcmQiOiIkMmIkMTAkZ2VKRFBETk5WcWhOcmxlZi9ibC9JdWU4dzlpR2NTY0x1c01pVUJVZ3pzU0Njb0xTdG9EQm0ifSwiaWF0IjoxNjc5ODAyNDcwLCJleHAiOjE2Nzk4MDI3NzB9._S4SYJKJA2KF8HPRIv2-mJ0_JkqHkhDBgUdUcaQhhCA",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"user_id\":\"5\",\t\r\n    \"res_id\":\"3\",\t\r\n    \"date_like\":\"2023 01 01 09 00 00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/food/create-like-res",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"food",
+						"create-like-res"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "domain",
+			"value": "localhost:8080/api",
+			"type": "string"
+		}
+	]
+}

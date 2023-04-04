@@ -66,7 +66,7 @@ const updateFood = async (req , res) => {
 const getLikeResUser = async (req, res) => {
     try {
         let data = await model.like_res.findAll({
-            include: ["re","user"]
+            include: ["user","re"]
 
         });
         res.status(200).send(data);
@@ -75,6 +75,8 @@ const getLikeResUser = async (req, res) => {
     }
     
 }
+
+
 
 //like nhà hàng
 const createLikeRes = async (req, res) => {
@@ -85,9 +87,18 @@ const createLikeRes = async (req, res) => {
             res_id,	
             date_like
         }
-
-        let data = await model.like_res.create(newLike);
-        res.status(200).send(data);
+        let existData = await model.like_res.findOne({
+            where:{
+                user_id,
+                res_id
+            }
+        })
+        if (existData) {
+            res.send("dữ liệu đã tồn tại")
+        } else {
+            let data = await model.like_res.create(newLike);
+            res.status(200).send(data);
+        }
         
     } catch (error) {
         console.log(error);
@@ -98,25 +109,26 @@ const createLikeRes = async (req, res) => {
 const removeLikeRes = async (req, res) => {
     try {
         let {user_id,res_id} = req.params;
-        let existData = model.like_res.findAll({
+        let existData = await model.like_res.findOne({
             where:{
                 user_id,
                 res_id
             }
         })
         if (existData) {
-            let data = await model.like_res.destroy({
+            await model.like_res.destroy({
                 where:{
                     user_id,
                     res_id
                 }
             });
-            res.status(200).send(data);
+            let data = await model.like_res.findAll();
+            res.send(data);
         } else {
-            res.send("dữ liệu ko tồn tại")
+            res.send("ko tìm thấy");
         }
     } catch (error) {
-        console.log(error);
+        res.status(500).send("lỗi BE");
     }
 }
 
@@ -134,6 +146,82 @@ const countLikeRes = async (req, res) => {
         res.status(200).send(data);
 }
 
+//thêm đánh giá nhà hàng
+const createRateRes = async (req, res) => {
+    try {
+        let {user_id, res_id, amount, date_rate } = req.body;
+            let newRate = {
+                user_id,
+                res_id,
+                amount,
+                date_rate
+            }
+        let existData = await model.rate_res.findOne({
+            where:{
+                user_id,
+                res_id
+            }
+        })
+        if (existData) {
+            res.send("dữ liệu đã tồn tại")
+        } else {
+            let data = await model.rate_res.create(newRate);
+            res.status(200).send(data);
+        } 
+    } catch (error) {
+        res.status(500).send("lỗi BE");
+    }    
+}
+
+//lấy danh sách đánh giá theo nhà hàng và user
+const getRateResUser = async (req, res) => {
+    try {
+        const data = await model.rate_res.findAll({
+            include: ["user","re"]
+        })
+        res.status(200).send(data);
+    } catch (error) {
+        res.status(500).send("lỗi BE")
+    }
+    
+}
+
+//user đặt món
+const userOrder = async (req, res) => {
+    try {
+        let {user_id, food_id, amount, code, arr_sub_id} = req.body;
+            let newOrder = {
+            user_id,
+            food_id,
+            amount,
+            code,
+            arr_sub_id
+            }
+        const existData = await model.order.findOne({
+            where:{
+                user_id,
+                food_id
+            }
+        })
+        if (existData) {
+            res.send("dữ liệu đã tồn tại")
+        } else {
+            await model.order.create(newOrder);
+            let data = await model.order.findOne({
+                where:{
+                    user_id,
+                    food_id
+                },
+                include: ["user","food"]
+            })
+            res.status(200).send(data);
+        }   
+    } catch (error) {
+        res.status(500).send("lỗi BE");
+    }
+    
+}
+
 module.exports = {
     getFood,
     createFood,
@@ -141,5 +229,8 @@ module.exports = {
     getLikeResUser,
     countLikeRes,
     createLikeRes,
-    removeLikeRes
+    removeLikeRes,
+    createRateRes,
+    getRateResUser,
+    userOrder
 }
